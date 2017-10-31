@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Members2</title>
+    <title>Reponsedelunivers</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "layouts/header" %>
+    <div class="container" style="padding-top: 5rem;">
+      <% if flash[:danger] %>
+        <div class="alert alert-danger">
+          <%= flash[:danger] %>
+        </div>
+      <% end %>
+      <%= yield %>
+    </div>
   </body>
 </html>

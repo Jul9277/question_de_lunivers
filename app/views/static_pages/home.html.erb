@@ -1,0 +1,7 @@
+
+<h1>Bienvenue sur notre page</h1>
+<p> Nous allons pouvoir répondre à la question de l'univers</p>
+
+<% if logged_in? %>
+  <p><a href='<%= secret_page_path %>'>Suivez-nous!</a></p>
+<% end %>

@@ -1,0 +1,9 @@
+<h1>Votre session</h1>
+<p>inscrit toi pour connaitre la réponse de l'univers</p>
+
+<%= form_for :session, url: '/login' do |f| %><br/>
+  Email: <%= f.text_field :email %><br/>
+  Password: <%= f.text_field :password %><br/>
+  <br/>
+  <%= f.submit %>
+<% end %>
